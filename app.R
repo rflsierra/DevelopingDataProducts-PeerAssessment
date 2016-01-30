@@ -42,8 +42,8 @@ ui <- navbarPage(
              tags$h3("Sample's budgetary requirements"),
              
              fluidRow(
-                 column(4, numericInput(inputId = "cost", label = "Cost per poll (USD)", min = 10, max = 100, step = 5, value = 10)),
-                 column(4, numericInput(inputId = "budget", label = "Total budget (USD)", min = 500, max = 1000000, step = 500, value = 70000))
+                 column(4, numericInput(inputId = "cost", label = "Cost per interview (USD)", min = 10, max = 100, step = 5, value = 10)),
+                 column(4, numericInput(inputId = "budget", label = "Total available budget (USD)", min = 500, max = 1000000, step = 500, value = 70000))
              ),
              
              fluidRow(),
