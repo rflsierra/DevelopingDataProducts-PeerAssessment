@@ -1,0 +1,7 @@
+Title: Developing Data Products' Project
+Author: Rafael Sierra
+AuthorUrl: https://www.linkedin.com/in/rafael-sierra-aa57959?trk=hp-identity-name
+License: RStudio Version 0.99.467 
+DisplayMode: Showcase
+Tags: Project
+Type: Shiny
