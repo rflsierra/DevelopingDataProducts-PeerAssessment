@@ -19,7 +19,12 @@ ui <- navbarPage(
              tags$p("2. Choose values for the cost of each interview in the poll (from 10 to 100 USD) and the complete budget (from 500 to 1000000 USD)."),
              tags$p("3. Review the results in the two plots provided."),
              tags$p("4. Determine the gaps from the ideal situation for the user."),
-             tags$p("5. Adjust the inputs and retry until satisfied with the result.")
+             tags$p("5. Adjust the inputs and retry until satisfied with the result."),
+             
+             fluidRow(),
+             tags$h2("Github Repository:"),
+             tags$p("https://github.com/rflsierra/DevelopingDataProducts-PeerAssessment")
+             
              
              ),
     
@@ -67,7 +72,7 @@ server <- function(input, output) {
     
     output$sample <- renderPlot({
         histogram(rnorm(n = currentsample(), sd = currentsd()), col = "gray", alpha = 0.3,
-                  main = "Determined sample's distribution and standar deviations", xlim = c(-5,5),
+                  main = "Determined sample's distribution and standard deviations", xlim = c(-5,5),
                   xlab = "Position of sample cases", ylab = "Frequency",
                   panel = function(...) {
                       panel.abline(v = currentsd(), lty = "dotted", col = "yellow")
@@ -82,10 +87,10 @@ server <- function(input, output) {
         })
     
     output$breakeven <- renderPlot({
-        plot(x = seq_len(40000), y = seq_len(40000) * as.numeric(input$cost), type = "l", main = "Break-even point in invesment",
+        plot(x = seq_len(40000), y = seq_len(40000) * as.numeric(input$cost), type = "l", main = "Investment: Break-even point",
              xlab = "Number of cases in sample", ylab = "Cost of samples in poll")
         abline(v = currentsample())
-        text(x = currentsample(), y = 0, "Sample required")
+        text(x = currentsample(), y = 0, "Sample size required")
         abline(h = input$budget)
         text(x = 7000, y = input$budget, "Budget available")
     })
