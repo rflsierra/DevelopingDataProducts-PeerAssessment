@@ -2,7 +2,7 @@ App to calculate a proper sample for a poll
 ========================================================
 author: Rafael Sierra
 autosize: true
-date: Sat Jan 30 09:49:49 2016
+date: Sat Jan 30 10:18:20 2016
 
 Github Repository:
 https://github.com/rflsierra/DevelopingDataProducts-PeerAssessment
@@ -19,6 +19,8 @@ Objectives:
 - Calculates the sample size required when applying a poll given certain restrictions provided by the user.
 - Calculates the cost of such study and its relation to the allocated budget for the project.
 - Provides the capability to interact and adjust inputs in order to obtain an optimal combination. 
+
+The whole code is contained in a file called app.R, which has the ui.R and the server.R parts. Recently, Shiny allows you to do so in just one file, which seems much more elegant and organised, keeping in all cases the content and performance of the ui.R and server.R
 
 About the Inputs
 ========================================================
